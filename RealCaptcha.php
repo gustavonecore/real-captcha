@@ -15,6 +15,8 @@ use the fonts and all their licenses allow redistribution and commercial use.
 
 namespace omranjamal\RealCaptcha;
 
+use Exception;
+
 class realCaptchaOutput{
     public $array = array();
     public $text = "";
@@ -101,7 +103,7 @@ class RealCaptcha{
 
         "source" => realCaptcha::RANDOM,
         "dictionary_file" => "dictionary.php",
-        "fonts_dir" => "fonts/",
+        "fonts_dir" => __DIR__ . "/resources/fonts/",
 
         "number_of_words" => 2,
         "random_length" => FALSE,
@@ -109,6 +111,8 @@ class RealCaptcha{
         "background_color" => realCaptcha::GREY_VARIABLE,
         "text_color" => array(0,0,0)
     );
+
+
 
 
 
